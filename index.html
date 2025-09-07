@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Interactive Web Pages Assignment</title>
+  <link rel="stylesheet" href="Styles/styles.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Interactive Web Pages with JavaScript 🚀</h1>
+    <button id="toggle-theme-btn" aria-label="Toggle light/dark mode">Toggle Light/Dark Mode</button>
+  </header>
+
+  <main>
+
+    <!-- Part 1: Event Handling Demo -->
+    <section id="event-handling">
+      <h2>Part 1: JavaScript Event Handling</h2>
+      <p>Hover or click the button below to see event handling in action:</p>
+      <button id="event-btn">Click or Hover Me!</button>
+      <p id="event-msg" class="hidden"></p>
+    </section>
+
+    <!-- Part 2: Interactive Elements -->
+    <section id="interactive-elements">
+      <h2>Part 2: Interactive Elements</h2>
+
+      <!-- Light/Dark Mode toggle already in header -->
+
+      <!-- Counter / Button Game -->
+      <div class="interactive-box" id="counter-game">
+        <h3>Counter Game</h3>
+        <p>Score: <span id="counter-value">0</span></p>
+        <button id="increment-btn">Increase</button>
+        <button id="decrement-btn">Decrease</button>
+        <button id="reset-counter-btn">Reset</button>
+      </div>
+
+      <!-- Collapsible FAQ Section -->
+      <div class="interactive-box" id="faq-section">
+        <h3>FAQ Section (Collapsible)</h3>
+        <div class="faq-item">
+          <button class="faq-question">What is JavaScript?</button>
+          <div class="faq-answer hidden">JavaScript is a programming language used to make web pages interactive.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">What is DOM?</button>
+          <div class="faq-answer hidden">The DOM is the Document Object Model representing the page structure.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">What is event handling?</button>
+          <div class="faq-answer hidden">Event handling lets you respond to user actions like clicks and keyboard input.</div>
+        </div>
+      </div>
+
+      <!-- Simple Dropdown Menu -->
+      <div class="interactive-box" id="dropdown-menu">
+        <h3>Simple Dropdown Menu</h3>
+        <button id="dropdown-toggle">Select an option ▼</button>
+        <ul id="dropdown-options" class="hidden" role="menu" tabindex="-1">
+          <li role="menuitem" tabindex="0">Option 1</li>
+          <li role="menuitem" tabindex="0">Option 2</li>
+          <li role="menuitem" tabindex="0">Option 3</li>
+        </ul>
+        <p>Selected option: <span id="selected-option">None</span></p>
+      </div>
+
+      <!-- Tabbed Interface -->
+      <div class="interactive-box" id="tabbed-interface">
+        <h3>Tabbed Interface</h3>
+        <div class="tabs">
+          <button class="tab-btn active" data-tab="tab1">Tab 1</button>
+          <button class="tab-btn" data-tab="tab2">Tab 2</button>
+          <button class="tab-btn" data-tab="tab3">Tab 3</button>
+        </div>
+        <div class="tab-content active" id="tab1">
+          <p>PLP Academy is awesome!!.</p>
+        </div>
+        <div class="tab-content" id="tab2">
+          <p>JavaScript brings life to the frontend.</p>
+        </div>
+        <div class="tab-content" id="tab3">
+          <p>I will become a full stack developer.</p>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Part 3: Form Validation -->
+    <section id="form-validation">
+      <h2>Part 3: Form Validation</h2>
+      <form id="signup-form" novalidate>
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+          <small class="error-msg"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="text" id="email" name="email" required />
+          <small class="error-msg"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required />
+          <small class="error-msg"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="confirm-password">Confirm Password:</label>
+          <input type="password" id="confirm-password" name="confirm-password" required />
+          <small class="error-msg"></small>
+        </div>
+
+        <button type="submit">Sign Up</button>
+        <p id="form-feedback" class="form-feedback"></p>
+      </form>
+    </section>
+
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
